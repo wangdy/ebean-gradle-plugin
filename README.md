@@ -24,8 +24,8 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.0.4'
-    ext.ebean_version = "8.6.2-SNAPSHOT"
+    ext.kotlin_version = '1.0.6'
+    ext.ebean_version = "10.1.5"
     ext.postgresql_driver_version = "9.4.1207.jre7"
 
     repositories {
@@ -33,7 +33,7 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.avaje.ebean:ebean-gradle-plugin:0.1.1"
+        classpath "com.github.wangdy:ebean-gradle-plugin:10.1.1"
     }
 }
 
@@ -52,12 +52,10 @@ sourceSets {
 dependencies {
 
     compile "org.postgresql:postgresql:$postgresql_driver_version"
-    compile "org.avaje.ebean:ebean:$ebean_version"
-    compile "org.avaje.ebean:ebean-querybean:8.4.1"
+    compile "io.ebean:ebean:$ebean_version"
+    compile "io.ebean:ebean-querybean:10.1.1"
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-
-    testCompile "org.avaje.composite:composite-testing:3.1"
 }
 
 kapt {
@@ -67,12 +65,6 @@ kapt {
 ebean {
     debugLevel = 0 //1 - 9
     packages = ['org.example']
-}
-
-test {
-    useTestNG()
-    testLogging.showStandardStreams = true
-    testLogging.exceptionFormat = 'full'
 }
 
 ```
