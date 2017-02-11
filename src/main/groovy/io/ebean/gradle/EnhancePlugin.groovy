@@ -1,4 +1,4 @@
-package org.avaje.ebean.gradle
+package io.ebean.gradle
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project

@@ -1,4 +1,4 @@
-package org.avaje.ebean.gradle
+package io.ebean.gradle
 
 import io.ebean.typequery.agent.offline.InputStreamTransform
 import io.ebean.enhance.agent.Transformer
