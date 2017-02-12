@@ -3,7 +3,7 @@ version '10.1.1'
 
 apply plugin: 'groovy'
 apply plugin: 'maven'
-//apply plugin: 'signing'
+apply plugin: 'signing'
 
 repositories {
     mavenCentral()
@@ -32,15 +32,6 @@ artifacts {
     archives sourcesJar
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: uri('./repo'))
-        }
-    }
-}
-
-/*
 signing {
     sign configurations.archives
 }
@@ -51,19 +42,19 @@ uploadArchives {
             beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
             repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
-                authentication(userName: sonatypeUsername, password: sonatypePassword)
+                authentication(userName: ossrhUsername, password: ossrhPassword)
             }
 
             pom.project {
                 name 'ebean-gradle-plugin'
                 packaging 'jar'
                 description 'Gradle plugin for enhancement Ebean entity beans'
-                url 'http://github.com/ebean-orm/ebean-gradle-plugin'
+                url 'https://github.com/wangdy/ebean-gradle-plugin'
 
                 scm {
-                    url 'scm:git@github.com/ebean-orm/ebean-gradle-plugin.git'
-                    connection 'scm:git@github.com/ebean-orm/ebean-gradle-plugin.git'
-                    developerConnection 'scm:git:https://github.com/ebean-orm/ebean-gradle-plugin.git'
+                    url 'scm:git@github.com/wangdy/ebean-gradle-plugin.git'
+                    connection 'scm:git@github.com/wangdy/ebean-gradle-plugin.git'
+                    developerConnection 'scm:git:https://github.com/wangdy/ebean-gradle-plugin.git'
                 }
 
                 licenses {
@@ -76,11 +67,11 @@ uploadArchives {
 
                 developers {
                     developer {
-                        id 'rbygrave'
-                        name 'Robin Bygrave'
+                        id 'wangdy'
+                        name 'Wang Dongyang'
                     }
                 }
             }
         }
     }
-}*/
+}
