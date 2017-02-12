@@ -1,5 +1,5 @@
 group 'com.github.wangdy'
-version '10.1.1'
+version '10.1.2'
 
 apply plugin: 'groovy'
 apply plugin: 'maven'

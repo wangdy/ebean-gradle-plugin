@@ -33,7 +33,7 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.github.wangdy:ebean-gradle-plugin:10.1.1"
+        classpath "com.github.wangdy:ebean-gradle-plugin:10.1.2"
     }
 }
 

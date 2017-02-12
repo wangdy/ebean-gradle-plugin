@@ -26,7 +26,7 @@ class EnhancePlugin implements Plugin<Project> {
             def deps = project.dependencies
 
             // add needed dependencies for KAPT processing
-            deps.add('kapt', "io.ebean:ebean-querybean:10.1.2")
+            deps.add('kapt', "io.ebean:ebean-querybean:10.1.1")
             deps.add('kapt', "io.ebean:querybean-generator:$params.generatorVersion")
             deps.add('kapt', "javax.persistence:persistence-api:1.0")
         }
