@@ -2,8 +2,8 @@ package io.ebean.gradle
 
 import io.ebean.typequery.agent.offline.InputStreamTransform
 import io.ebean.enhance.agent.Transformer
-import org.avaje.ebean.gradle.util.ClassUtils
-import org.avaje.ebean.gradle.util.EnhancementFileFilter
+import io.ebean.gradle.util.ClassUtils
+import io.ebean.gradle.util.EnhancementFileFilter
 import io.ebean.typequery.agent.CombinedTransform
 import io.ebean.typequery.agent.QueryBeanTransformer
 
